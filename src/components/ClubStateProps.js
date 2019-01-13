@@ -28,21 +28,21 @@ class ClubStateProps extends React.Component {
         const { membersSort } = this.state;
 
         return (
-            <React.Fragment>
+            <li>
                 <h1>{name}</h1>
                 <i className={fa}></i>
                 <ul>
                     {  
-                        membersSort.map(member => (
+                        membersSort.map(memberSort => (
                             <li>
-                                {member}
+                                {memberSort}
                             </li>
                             )
                         ) 
                     }
                 </ul>
                 <button onClick={this.handleSort}>Ordena alfabeticamente</button>
-            </React.Fragment>
+            </li>
             );
         }
 }

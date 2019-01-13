@@ -118,7 +118,10 @@ class App extends Component {
     ];
 
     return (
-      <ClubList clubs={clubs} />
+      <React.Fragment>
+        <h1>Listado de Clubs</h1>
+        <ClubList clubs={clubs} />
+      </React.Fragment>
       )
     }
 }

@@ -28,7 +28,7 @@ class ClubState extends React.Component {
         const { nameClub, faClub, membersSort } = this.state;
         
         return (
-            <React.Fragment>
+            <li>
                 <h1>{nameClub}</h1>
                 <i className={faClub}></i>
                 <ul>
@@ -42,7 +42,7 @@ class ClubState extends React.Component {
                     }
                 </ul>
                 <button onClick={this.handleSort}>Ordena alfabeticamente</button>
-            </React.Fragment>
+            </li>
             );
         }
 }

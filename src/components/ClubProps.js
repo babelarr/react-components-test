@@ -19,7 +19,7 @@ class ClubProps extends React.Component {
         const { name, fa, members } = this.props;
         
         return (
-            <React.Fragment>
+            <li>
                 <h1>{name}</h1>
                 <i className={fa}></i>
                 <ul>
@@ -33,7 +33,7 @@ class ClubProps extends React.Component {
                     }
                 </ul>
                 <button onClick={this.handleSort}>Ordena alfabeticamente</button>
-            </React.Fragment>
+            </li>
             );
         }
 }
