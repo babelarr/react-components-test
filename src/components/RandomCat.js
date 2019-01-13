@@ -8,12 +8,12 @@ class RandomCat extends React.Component {
     render() {
         const randomCat = getRandomInteger(NUMBER_OF_CATS);
         return (
-          <div>
+          <React.Fragment>
             <RandomCatTitle txt='Me encantan los gatos :)' styleTitle='title__style' />
             <a href="https://lorempixel.com">
               <img src={`https://lorempixel.com/400/200/cats/${randomCat}`} alt="Random cat" />
             </a>
-          </div>
+          </React.Fragment>
         );
     }
 }
