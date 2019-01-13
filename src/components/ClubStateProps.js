@@ -7,10 +7,15 @@ class ClubStateProps extends React.Component {
         const { members } = props;
 
         this.state = {
-            membersSort: members
+            membersSort: members,
+            styleOver: ''
         };
     
         this.handleSort = this.handleSort.bind(this);
+        this.handleOver = this.handleOver.bind(this);
+        this.handleOut = this.handleOut.bind(this);
+
+
     }
 
     handleSort(event) {
@@ -23,12 +28,24 @@ class ClubStateProps extends React.Component {
         })
     }
 
+    handleOver (event) {
+        this.setState({
+            styleOver: 'over'
+        })
+    }
+
+    handleOut (event) {
+        this.setState({
+            styleOver: ''
+        })
+    }
+
     render() {
         const { name, fa } = this.props;
         const { membersSort } = this.state;
 
         return (
-            <li>
+            <li className={this.state.styleOver} onMouseOver={this.handleOver} onMouseOut={this.handleOut}>
                 <h1>{name}</h1>
                 <i className={fa}></i>
                 <ul>
